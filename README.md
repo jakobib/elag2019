@@ -6,21 +6,26 @@
 
 **Title:** Lessons learned while building the vocabulary mapping tool Cocoda
 
-**Author** Jakob Voß (Verbundzentrale des GBV)
+**Authors:** Jakob Voß; Stefan Peters; Uma Balakrishnan (Verbundzentrale des GBV)
 
 ## Abstract
 
-Five years ago we started a project (<https://coli-conc.gbv.de>) to facilitate
-creation and management of concordances between knowledge organization systems
-such as controlled vocabularies, classification schemes, and thesauri. Since
-then we have collected thousands of mappings, made them available with its
-diverse vocabularies, and developed the web application Cocoda to easily create
-and evaluate mappings (<https://github.com/gbv/cocoda>). The talk will less
-focus on the outcome of this project: the data is freely made available via Web
-APIs, the data formats are documented, and the software is open source both by
-license and by development process. Instead we will tell the paths that have
-been taken (we had to throw away two working prototypes), explain technical
-decisions that have been made (we developed a new data format to express more
-than SKOS in JSON), and show existing challenges (it can be hard to motivate
-librarians to try out new tools).
+The project coli-conc(<https://coli-conc.gbv.de>) aims to facilitate creation,
+easy management, and storage of concordances between knowledge organization
+systems such as controlled vocabularies, classification schemes, and thesauri
+on a single platform. Since its foundation five years ago we have collected
+numerous mappings between diverse indexing systems and vocabularies from
+various sources and projects in different subject fields. The mappings are
+freely made available in a uniform format for use and exchange by libraries and
+other institutions. The second contribution of coli-conc is the web application
+Cocoda to enhance the speed and efficiency of the intellectual mapping building
+process as well as to evaluate existing and newly created mappings
+(<https://github.com/gbv/cocoda>). 
 
+The talk will less focus on the outcome of project: mapping data is available
+via Web APIs, the data formats are documented, and the software is open source
+both by license and by development process. Instead we will tell the paths that
+have been taken (we had to throw away two working prototypes), explain
+technical decisions that have been made (development of a new data format to
+express more than SKOS in JSON), and show existing challenges (it can be hard
+to motivate librarians to try out new tools).
