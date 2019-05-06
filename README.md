@@ -1,12 +1,14 @@
 # Lessons learned while building the vocabulary mapping tool Cocoda
 
-*This repository contains the abstract of a proposed presentation at [ELAG 2019]*
+*Presentation at [ELAG 2019]*
 
 [ELAG 2019]: https://www.elag2019.de/
 
 **Title:** Lessons learned while building the vocabulary mapping tool Cocoda
 
 **Authors:** Jakob Voß; Stefan Peters; Uma Balakrishnan (Verbundzentrale des GBV)
+
+**Date:** March 8th 2019
 
 ## Abstract
 

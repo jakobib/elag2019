@@ -6,8 +6,8 @@
 conducted by our colleauge Ulrike Reiner since 2002
 
 * automatic DDC classification (**coli-auto**)
-* automatic analysis and synthesis of DDC numbers (**coli-ana**)
 * automatic checking of DDC number correctness (**coli-corr**)
+* automatic analysis and synthesis of DDC numbers (**coli-ana**)
 * semi-automatic creation of DDC concordance (**coli-conc**)
 
 $\Longrightarrow$ Domain expert and previous works to build on
@@ -22,24 +22,45 @@ $\Longrightarrow$ Domain expert and previous works to build on
 
 ## coli-conc, the idea
 
-* avoid aching hands with a mapping-tool
+* avoid aching hands with a **mapping-tool**
 
-* facilitate creation and management of concordances\
-  between knowledge organization systems
+* facilitate creation and management of\
+  **concordances** between **knowledge organization systems**
 
+* in particular library classifications
 
-## coli-conc, the project (2014)
+    * Dewey Decimal Classification (DDC)
+    * Regensburger Verbundklassifikation (RVK)
+    * Basisklassifikation (BK)
+    * ...
 
-* 2014
-    * Create first prototype
-    * Create specification
-    * Write project grant
+## coli-conc, the project
 
-* 2016: Start new from scratch in Java
-    * failed
-    * learned
+* 2014: first prototype
+
+* 2015: specification and project grant
+
+* 2016: new implementation in Java
+
+* 2017: learning by failing
 
 * 2018: start new from scratch in Node & Vue
+
+## coli-conc 2014: first prototype with AngularJS
+
+![](img/coli-conc-screenshot-2015.png){width=128m height=72mm}
+
+## coli-conc 2015-2016
+
+
+
+## coli-conc 2018: ...
+
+![](img/coli-conc-screenshot-2018-11.png){width=114mm height=58mm}
+
+## coli-conc 2019: ...
+
+![](img/coli-conc-screenshot-2019-5.png){width=114mm height=58mm}
 
 ## Data processing
 
@@ -49,10 +70,16 @@ CSV, MARCXML, SKOS $\longrightarrow$ JSKOS
 
 * 3 different tools: jskos-convert, mc2skos, skos2jskos
 
+## JSKOS Data format
+
+...
+
 ## Infrastructure
 
 * cocoda
-* jskos-server
+* jskos-server (JSKOS over REST)
+* mapping suggestions (OpenRefine Reconciliation API)
+* login-server (OAuth)
 * ...
 
 ## user interface
@@ -160,6 +187,18 @@ Easy to replace parts of the infrastructure. Example RVK hosting:
 * Current development cycle started in 2018
 
 # Summary
+
+## Summary: We...
+
+* ...collect mappings between authority files
+    * JSKOS data format
+* ...build a mapping tool (Cocoda)
+    * APIs
+    * Prototypes
+    * ...
+* We learned a lot
+    * Data conversion
+    * ...
 
 ## Feedback is welcome!
 
