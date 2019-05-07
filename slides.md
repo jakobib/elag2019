@@ -10,7 +10,7 @@ conducted by our colleauge Ulrike Reiner since 2002
 * automatic analysis and synthesis of DDC numbers (**coli-ana**)
 * semi-automatic creation of DDC concordance (**coli-conc**)
 
-$\Longrightarrow$ Domain expert and previous works to build on
+$\Rightarrow$ Domain expert and previous works to build on
 
 ## coli-ana, an example
 
@@ -22,59 +22,84 @@ $\Longrightarrow$ Domain expert and previous works to build on
 
 ## coli-conc, the idea
 
-* avoid aching hands with a **mapping-tool**
+* a **mapping-tool** to avoid aching hands
 
-* facilitate creation and management of\
-  **concordances** between **knowledge organization systems**
+* facilitate creation and management of **concordances**\
+  between **knowledge organization systems (KOS)**
 
 * in particular library classifications
 
     * Dewey Decimal Classification (DDC)
     * Regensburger Verbundklassifikation (RVK)
     * Basisklassifikation (BK)
+    * *several local classification schemes* 
     * ...
 
-## coli-conc, the project
+## coli-conc, to-do list
 
-* 2014: first prototype
+1. Collect KOS metadata\
+   $\Rightarrow$ [BARTOC](https://bartoc.org/) registry
 
-* 2015: specification and project grant
+2. Collect and publish existing mappings
 
-* 2016: new implementation in Java
+    * DDC/RVK/GND/BK/STW/LCSH/IxTheo $\leftrightarrow$\
+      384.491 mappings
 
-* 2017: learning by failing
+    * Wikidata $\leftrightarrow$ ...\
+      3.607.683 mappings (as of 6/2018)
 
-* 2018: start new from scratch in Node & Vue
+    * Additional mappings not converted and imported yet
 
-## coli-conc 2014: first prototype with AngularJS
+3. Create mapping tool\
+   $\Rightarrow$ Cocoda!
+
+## Cocoda 2014: first prototype with AngularJS
 
 ![](img/coli-conc-screenshot-2015.png){width=128m height=72mm}
 
-## coli-conc 2015-2016
+## Cocoda 2015-2016
+
+* Write project grant and receive additional funding
+
+* Continue with specification (especially JSKOS data format)
+
+* Create a new implementation
+
+## JSKOS data format
+
+...TODO...
+
+## Cocoda 2015-2016
+
+* Write project grant and receive additional funding
+
+* Continue with specification (especially JSKOS data format)
+
+* Create a new implementation
 
 
+## Cocoda 2015-2016
 
-## coli-conc 2018: ...
+* Write project grant and receive additional funding
+
+* Continue with specification (especially JSKOS data format)
+
+* Create a new implementation
+
+    * in Java
+    * and throw it away afterwards
+
+## coli-conc 2018: start new from scratch (Node & Vue)
 
 ![](img/coli-conc-screenshot-2018-11.png){width=114mm height=58mm}
 
-## coli-conc 2019: ...
+## coli-conc 2019: curent layout
 
 ![](img/coli-conc-screenshot-2019-5.png){width=114mm height=58mm}
 
-## Data processing
-
-CSV, MARCXML, SKOS ... $\longrightarrow$ Cleanup
-
-CSV, MARCXML, SKOS $\longrightarrow$ JSKOS
-
-* 3 different tools: jskos-convert, mc2skos, skos2jskos
-
-## JSKOS Data format
-
-...
-
 ## Infrastructure
+
+__TODO__
 
 * cocoda
 * jskos-server (JSKOS over REST)
@@ -82,18 +107,29 @@ CSV, MARCXML, SKOS $\longrightarrow$ JSKOS
 * login-server (OAuth)
 * ...
 
+## Data processing
+
+__TODO__
+
+CSV, MARCXML, SKOS ... $\longrightarrow$ Cleanup
+
+CSV, MARCXML, SKOS $\longrightarrow$ JSKOS
+
+* 3 different tools: jskos-convert, mc2skos, skos2jskos
+
+
 ## user interface
 
-* live demo!
+__TODO:__ live demo?
 
 # Lessons learned
 
 ## People stick to spreadsheets
 
-* tyranny of the ~~file~~ spreadsheet
+* limited
     
-    * 1-to-n mappings?
-    * repeatable fields (e.g. creator names)?
+    * 1-to-n mappings
+    * repeatable fields
     * leading zeroes
     * ...
 
@@ -101,7 +137,9 @@ CSV, MARCXML, SKOS $\longrightarrow$ JSKOS
 
 * you think CSV, they think Excel
 
-* other popular spreadsheet tools: Google Sheets, OpenRefine
+. . .
+
+***$\Rightarrow$ spreadsheets are not perfect but actually useful***
 
 ## Software development is communication
 
@@ -118,15 +156,12 @@ CSV, MARCXML, SKOS $\longrightarrow$ JSKOS
 * explain
 
     * pros and cons of technical decisions
-    * why open by default is better
+    * basic such as URIs and Open Data
+    * not all features are implemented first
 
-<!--
-examples: 
+. . .
 
-* insist on CC0 license
-* explain URIs
-* we pushed back user groups and review workflows 
--->
+***$\Rightarrow$ Communicate!***
 
 ## No schema, no data quality
 
@@ -138,45 +173,41 @@ examples:
 
 * empty strings, empty arrays, null values...
 
-*Never trust any data unless you have validated its shapes!*
+. . .
 
-## Holy decoupling!
+***$\Rightarrow$ Never trust any data you haven't validated!***
 
-* SOA
+## Holy decoupling
 
-* modules
+* service oriented architecture (SOA)
 
-* shell scripts
+* APIs and data formats matter most
 
-...
+* Things will break anyway
 
-Easy to replace parts of the infrastructure. Example RVK hosting:
+. . .
 
-* RVK API
-* own database
-* DANTE
-* jskos-server
+Easy to replace parts of the infrastructure
 
-## Don't hesitate to throw away code 
+* RVK API $\rightarrow$ own DB $\rightarrow$ DANTE $\rightarrow$ jskos-server
 
-* Being forced to throw away code can help
+* PHP $\rightarrow$ Perl $\rightarrow$ JavaScript
 
-* One script has been written in PHP, Perl and JavaScript
-  (helps to treat scripts as black-box modules)
+. . .
 
-* many scripts and modules, sometimes it's easier to reimplement a piece anyway
-  
-* But: each time we stared from scratch we had more specifications and modules to build on
+***$\Rightarrow$ split your application into decoupled services!***
 
 ## Look out for beneficial beta-users
 
-* real use-cases and outcome instead of click-around testing
-
 * users prefer a mature product instead buggy prototype
 
-* their use-cases drive development in different directions
+* real use-cases and outcome instead of click-around testing
 
-*Agile development requires agile users!*
+* use-cases will drive development in different directions
+
+. . .
+
+***$\Rightarrow$ Agile development requires some agile users!***
 
 ## Patience and luck
 
@@ -186,19 +217,15 @@ Easy to replace parts of the infrastructure. Example RVK hosting:
 
 * Current development cycle started in 2018
 
+. . .
+
+***$\Rightarrow$ Good luck!***
+ 
 # Summary
 
-## Summary: We...
+## Summary
 
-* ...collect mappings between authority files
-    * JSKOS data format
-* ...build a mapping tool (Cocoda)
-    * APIs
-    * Prototypes
-    * ...
-* We learned a lot
-    * Data conversion
-    * ...
+__TODO__
 
 ## Feedback is welcome!
 
