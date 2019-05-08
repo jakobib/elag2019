@@ -10,6 +10,8 @@
 
 **Date:** March 8th 2019
 
+**PDF:** https://doi.org/10.5281/zenodo.2677601
+
 ## Abstract
 
 The project coli-conc(<https://coli-conc.gbv.de>) aims to facilitate creation,
